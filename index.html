@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preventing Digital Fraud</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        .section {
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        .fraud-card {
+            transition: transform 0.3s ease;
+        }
+        .fraud-card:hover {
+            transform: translateY(-5px);
+        }
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        }
+        .stat-card {
+            border-left: 4px solid #3b82f6;
+        }
+        .custom-shadow {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="sticky-nav bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-shield-alt text-blue-600 text-3xl mr-2"></i>
+                <span class="text-xl font-bold text-blue-600">Digital Fraud Shield</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#types" class="text-gray-700 hover:text-blue-600 transition">Fraud Types</a>
+                <a href="#prevention" class="text-gray-700 hover:text-blue-600 transition">Prevention</a>
+                <a href="#statistics" class="text-gray-700 hover:text-blue-600 transition">Statistics</a>
+                <a href="#technologies" class="text-gray-700 hover:text-blue-600 transition">Technologies</a>
+                <a href="#resources" class="text-gray-700 hover:text-blue-600 transition">Resources</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menuBtn" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white px-6 py-4 shadow-inner">
+            <div class="flex flex-col space-y-4">
+                <a href="#types" class="text-gray-700 hover:text-blue-600 transition">Fraud Types</a>
+                <a href="#prevention" class="text-gray-700 hover:text-blue-600 transition">Prevention</a>
+                <a href="#statistics" class="text-gray-700 hover:text-blue-600 transition">Statistics</a>
+                <a href="#technologies" class="text-gray-700 hover:text-blue-600 transition">Technologies</a>
+                <a href="#resources" class="text-gray-700 hover:text-blue-600 transition">Resources</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Protecting Yourself in the Digital Age</h1>
+            <p class="text-xl md:text-2xl mb-8">Learn how to identify, prevent, and combat digital fraud</p>
+            <a href="#types" class="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-full shadow-lg transition">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Introduction -->
+    <section class="container mx-auto px-6 py-12">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Understanding Digital Fraud</h2>
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <p class="text-lg mb-4">Digital fraud encompasses a wide range of deceptive practices that exploit vulnerabilities in digital technologies and systems. As our world becomes increasingly connected, fraudsters have developed sophisticated methods to steal sensitive information, compromise accounts, and conduct financial crimes.</p>
+                <p class="text-lg mb-4">Digital fraud costs individuals and businesses billions of dollars annually. According to recent statistics, global losses from digital fraud reached $41 billion in 2022 and were predicted to exceed $48 billion in 2023.</p>
+                <p class="text-lg">This resource will help you understand the most common types of digital fraud, learn effective prevention strategies, explore current statistics, and discover the technologies being used to combat these threats.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types of Digital Fraud -->
+    <section id="types" class="section bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Common Types of Digital Fraud</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Phishing -->
+                <div class="fraud-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-fish text-blue-600 text-2xl mr-3"></i>
+                            <h3 class="text-xl font-semibold">Phishing</h3>
+                        </div>
+                        <p class="text-gray-700">Fraudulent attempts to obtain sensitive information by disguising as a trustworthy entity in electronic communications. Typically conducted via email, these attacks often lead victims to fake websites designed to steal login credentials and financial information.</p>
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                            <h4 class="font-semibold mb-2">Warning Signs:</h4>
+                            <ul class="list-disc pl-5 text-gray-700">
+                                <li>Unexpected emails requesting urgent action</li>
+                                <li>Generic greetings instead of your name</li>
+                                <li>Spelling and grammar errors</li>
+                                <li>Suspicious links or attachments</li>
+                                <li>Requests for personal information</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Identity Theft -->
+                <div class="fraud-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-user-secret text-blue-600 text-2xl mr-3"></i>
+                            <h3 class="text-xl font-semibold">Identity Theft</h3>
+                        </div>
+                        <p class="text-gray-700">The fraudulent acquisition and use of a person's private identifying information, usually for financial gain. Criminals may use your identity to open new credit accounts, file tax returns, or receive medical services in your name.</p>
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                            <h4 class="font-semibold mb-2">Warning Signs:</h4>
+                            <ul class="list-disc pl-5 text-gray-700">
+                                <li>Unexplained withdrawals from your accounts</li>
+                                <li>Missing bills or other mail</li>
+                                <li>Calls about debts you don't recognize</li>
+                                <li>Unfamiliar accounts on your credit report</li>
+                                <li>Denial of credit for no apparent reason</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Account Takeover -->
+                <div class="fraud-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-user-lock text-blue-600 text-2xl mr-3"></i>
+                            <h3 class="text-xl font-semibold">Account Takeover</h3>
+                        </div>
+                        <p class="text-gray-700">Occurs when a fraudster gains unauthorized access to a user's account credentials. Once accessed, the criminal can change account details, make unauthorized purchases, drain funds, or steal personal information for further fraud.</p>
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                            <h4 class="font-semibold mb-2">Warning Signs:</h4>
+                            <ul class="list-disc pl-5 text-gray-700">
+                                <li>Notification of password changes you didn't make</li>
+                                <li>Unfamiliar transactions in your accounts</li>
+                                <li>Unable to access your accounts</li>
+                                <li>Changes to account details you didn't authorize</li>
+                                <li>Emails confirming purchases you didn't make</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Fraud -->
+                <div class="fraud-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-credit-card text-blue-600 text-2xl mr-3"></i>
+                            <h3 class="text-xl font-semibold">Payment Fraud</h3>
+                        </div>
+                        <p class="text-gray-700">Involves the unauthorized use of payment information to make transactions. This includes credit card fraud, wire transfer fraud, and other methods of stealing funds through payment systems. Criminals may use stolen card data or create counterfeit cards.</p>
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                            <h4 class="font-semibold mb-2">Warning Signs:</h4>
+                            <ul class="list-disc pl-5 text-gray-700">
+                                <li>Unrecognized charges on your statements</li>
+                                <li>Missing credit card or banking statements</li>
+                                <li>Receiving a new card you didn't request</li>
+                                <li>Unexpected denial of your credit card</li>
+                                <li>Transaction confirmation for purchases you didn't make</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Investment Fraud -->
+                <div class="fraud-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-chart-line text-blue-600 text-2xl mr-3"></i>
+                            <h3 class="text-xl font-semibold">Investment Fraud</h3>
+                        </div>
+                        <p class="text-gray-700">Schemes that promise high returns with little or no risk. These include Ponzi schemes, cryptocurrency scams, fake investment opportunities, and fraudulent financial advising. Typically relies on creating a false sense of urgency or exclusivity.</p>
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                            <h4 class="font-semibold mb-2">Warning Signs:</h4>
+                            <ul class="list-disc pl-5 text-gray-700">
+                                <li>Promises of guaranteed high returns</li>
+                                <li>Pressure to act quickly</li>
+                                <li>Unregistered or unlicensed sellers</li>
+                                <li>Overly consistent returns regardless of market conditions</li>
+                                <li>Complex strategies that cannot be explained clearly</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fake Apps and Websites -->
+                <div class="fraud-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-globe text-blue-600 text-2xl mr-3"></i>
+                            <h3 class="text-xl font-semibold">Fake Apps and Websites</h3>
+                        </div>
+                        <p class="text-gray-700">Fraudulent applications and websites designed to mimic legitimate ones. These fake platforms aim to collect personal and financial information, distribute malware, or trick users into making payments for nonexistent products or services.</p>
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                            <h4 class="font-semibold mb-2">Warning Signs:</h4>
+                            <ul class="list-disc pl-5 text-gray-700">
+                                <li>URLs with slight misspellings of known websites</li>
+                                <li>Poor design, spelling errors, or low-quality images</li>
+                                <li>No contact information or physical address</li>
+                                <li>Absence of privacy policy or terms of service</li>
+                                <li>Requests for payment via wire transfer or gift cards</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prevention Strategies -->
+    <section id="prevention" class="section container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">Digital Fraud Prevention Strategies</h2>
+        
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+            <h3 class="text-2xl font-semibold mb-6">Personal Security Measures</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <div class="mb-6">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-lock text-blue-600 mr-2"></i>
+                            <h4 class="text-xl font-medium">Use Strong, Unique Passwords</h4>
+                        </div>
+                        <p class="text-gray-700 ml-7">Create complex passwords with a mix of letters, numbers, and symbols. Use different passwords for each account and consider using a password manager to keep track of them securely.</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-user-shield text-blue-600 mr-2"></i>
+                            <h4 class="text-xl font-medium">Enable Multi-Factor Authentication</h4>
+                        </div>
+                        <p class="text-gray-700 ml-7">Add an extra layer of security by enabling multi-factor authentication whenever possible. This typically requires something you know (password) and something you have (like a phone) to access your accounts.</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-sync-alt text-blue-600 mr-2"></i>
+                            <h4 class="text-xl font-medium">Keep Software Updated</h4>
+                        </div>
+                        <p class="text-gray-700 ml-7">Regularly update your devices' operating systems, applications, and antivirus software. Updates often include security patches for vulnerabilities that could be exploited by fraudsters.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="mb-6">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-shield-alt text-blue-600 mr-2"></i>
+                            <h4 class="text-xl font-medium">Be Cautious with Personal Information</h4>
+                        </div>
+                        <p class="text-gray-700 ml-7">Limit what you share online, especially on social media. Be wary of surveys, quizzes, or free offers that request personal details. Check privacy settings on your accounts regularly.</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-search text-blue-600 mr-2"></i>
+                            <h4 class="text-xl font-medium">Verify Before You Trust</h4>
+                        </div>
+                        <p class="text-gray-700 ml-7">Always verify the identity of individuals or organizations before sharing personal information or making financial transactions. Use official contact methods rather than those provided in unsolicited communications.</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-wifi text-blue-600 mr-2"></i>
+                            <h4 class="text-xl font-medium">Secure Your Network</h4>
+                        </div>
+                        <p class="text-gray-700 ml-7">Use strong encryption on your home Wi-Fi network and avoid conducting sensitive transactions on public Wi-Fi. Consider using a VPN for additional security when connecting to public networks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+            <h3 class="text-2xl font-semibold mb-6">Financial Account Protection</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <div class="mb-6">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-bell text-blue-600 mr-2"></i>
+                            <h4 class="text-xl font-medium">Monitor Your Accounts</h4>
+                        </div>
+                        <p class="text-gray-700 ml-7">Regularly review your bank and credit card statements for unauthorized transactions. Set up alerts for account activity and consider using a credit monitoring service.</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-file-alt text-blue-600 mr-2"></i>
+                            <h4 class="text-xl font-medium">Check Your Credit Reports</h4>
+                        </div>
+                        <p class="text-gray-700 ml-7">Review your credit reports from all three major bureaus annually. Look for accounts or inquiries you don't recognize, which could indicate identity theft.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="mb-6">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-credit-card text-blue-600 mr-2"></i>
+                            <h4 class="text-xl font-medium">Use Secure Payment Methods</h4>
+                        </div>
+                        <p class="text-gray-700 ml-7">Consider using credit cards instead of debit cards for online purchases, as they typically offer better fraud protection. Look for secure payment options and avoid wire transfers to unknown recipients.</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-lock-open text-blue-600 mr-2"></i>
+                            <h4 class="text-xl font-medium">Consider a Credit Freeze</h4>
+                        </div>
+                        <p class="text-gray-700 ml-7">If you suspect your information has been compromised, place a credit freeze with the major credit bureaus to prevent new accounts from being opened in your name.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-8">
+            <h3 class="text-2xl font-semibold mb-6">Digital Communication Safety</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <div class="mb-6">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-envelope text-blue-600 mr-2"></i>
+                            <h4 class="text-xl font-medium">Scrutinize Emails</h4>
+                        </div>
+                        <p class="text-gray-700 ml-7">Be wary of unsolicited emails, especially those creating urgency or requesting personal information. Hover over links to verify destinations before clicking and be suspicious of unexpected attachments.</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-phone-slash text-blue-600 mr-2"></i>
+                            <h4 class="text-xl font-medium">Be Skeptical of Unsolicited Calls</h4>
+                        </div>
+                        <p class="text-gray-700 ml-7">Don't provide personal information to callers claiming to be from banks, government agencies, or tech support. Hang up and contact the organization directly using the official number from their website.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="mb-6">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-shopping-cart text-blue-600 mr-2"></i>
+                            <h4 class="text-xl font-medium">Shop on Secure Websites</h4>
+                        </div>
+                        <p class="text-gray-700 ml-7">Look for HTTPS in the URL and a padlock icon when shopping online. Research unfamiliar websites before making purchases and read reviews from other customers.</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-file-download text-blue-600 mr-2"></i>
+                            <h4 class="text-xl font-medium">Be Careful What You Download</h4>
+                        </div>
+                        <p class="text-gray-700 ml-7">Only download applications from official app stores or directly from trusted providers. Be wary of free software, as it may contain malware designed to steal your information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section id="statistics" class="section bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Digital Fraud Statistics</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-3">Global Impact</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-chart-line text-blue-600 mt-1 mr-3"></i>
+                            <span>Global losses from digital fraud reached <strong>$41 billion in 2022</strong> and were projected to exceed <strong>$48 billion in 2023</strong>.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chart-line text-blue-600 mt-1 mr-3"></i>
+                            <span>In 2023, scammers stole over <strong>$1 trillion</strong> from victims worldwide across all types of fraud.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chart-line text-blue-600 mt-1 mr-3"></i>
+                            <span>There are an average of more than <strong>249,000 cases</strong> of digital fraud annually.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-3">United States Data</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-chart-bar text-blue-600 mt-1 mr-3"></i>
+                            <span>Cybercrime incidents in the US have increased from <strong>467,000 in 2019 to more than
+                            880,000 in 2023</strong>.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chart-bar text-blue-600 mt-1 mr-3"></i>
+                            <span>Potential total losses increased to <strong>$12.5 billion in 2023</strong>, up from $10.3 billion in 2022.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chart-bar text-blue-600 mt-1 mr-3"></i>
+                            <span>Investment fraud losses rose to <strong>$4.57 billion in 2023</strong>, a 38% increase from the previous year.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-3">Fraud Types Breakdown</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-percentage text-blue-600 mt-1 mr-3"></i>
+                            <span><strong>34% of people</strong> have experienced cyber scams during the past 12 months.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-percentage text-blue-600 mt-1 mr-3"></i>
+                            <span><strong>85% of people</strong> received a digital scam attempt.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-percentage text-blue-600 mt-1 mr-3"></i>
+                            <span>Crypto-investment fraud has seen a significant increase, becoming one of the most rapidly growing fraud categories.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="stat-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-3">Emerging Trends</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-trend-up text-blue-600 mt-1 mr-3"></i>
+                            <span>AI-powered fraud techniques have made it easier for fraudsters to create convincing scams without technical expertise.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-trend-up text-blue-600 mt-1 mr-3"></i>
+                            <span>Mobile payment fraud is growing as more consumers use digital wallets and payment apps.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-trend-up text-blue-600 mt-1 mr-3"></i>
+                            <span>Account takeover fraud increased by 90% from 2020 to 2022, making it one of the fastest-growing fraud types.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies -->
+    <section id="technologies" class="section container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">Technologies Combating Digital Fraud</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- AI & Machine Learning -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-robot text-blue-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold">AI & Machine Learning</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Artificial intelligence and machine learning algorithms analyze patterns in transaction data to identify suspicious activities that may indicate fraud.</p>
+                    <h4 class="font-semibold mb-2">Key Applications:</h4>
+                    <ul class="list-disc pl-5 text-gray-700">
+                        <li>Behavioral biometrics (analyzing typing patterns, mouse movements)</li>
+                        <li>Anomaly detection in transaction patterns</li>
+                        <li>Real-time fraud risk scoring</li>
+                        <li>Adaptive authentication systems</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Biometric Authentication -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-fingerprint text-blue-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold">Biometric Authentication</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Using unique physical or behavioral characteristics to verify identity, providing stronger security than traditional passwords.</p>
+                    <h4 class="font-semibold mb-2">Key Applications:</h4>
+                    <ul class="list-disc pl-5 text-gray-700">
+                        <li>Fingerprint recognition</li>
+                        <li>Facial recognition</li>
+                        <li>Voice recognition</li>
+                        <li>Iris scanning</li>
+                        <li>Behavioral biometrics</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Blockchain Technology -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-link text-blue-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold">Blockchain Technology</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Decentralized, tamper-proof ledgers that provide transparent and secure record-keeping for transactions and identity verification.</p>
+                    <h4 class="font-semibold mb-2">Key Applications:</h4>
+                    <ul class="list-disc pl-5 text-gray-700">
+                        <li>Secure identity management</li>
+                        <li>Transparent transaction records</li>
+                        <li>Smart contracts for automated verification</li>
+                        <li>Decentralized authentication</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Advanced Analytics -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-chart-pie text-blue-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold">Advanced Analytics</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Sophisticated data analysis techniques used to detect patterns, anomalies, and relationships that may indicate fraudulent activity.</p>
+                    <h4 class="font-semibold mb-2">Key Applications:</h4>
+                    <ul class="list-disc pl-5 text-gray-700">
+                        <li>Predictive analytics for fraud prevention</li>
+                        <li>Device fingerprinting</li>
+                        <li>Network analysis to identify fraud rings</li>
+                        <li>Pattern recognition across multiple transactions</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Multi-Factor Authentication -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-key text-blue-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold">Multi-Factor Authentication</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Security systems requiring two or more verification methods from different categories to confirm user identity.</p>
+                    <h4 class="font-semibold mb-2">Key Applications:</h4>
+                    <ul class="list-disc pl-5 text-gray-700">
+                        <li>One-time passwords (OTP) sent via SMS or email</li>
+                        <li>Authentication apps generating time-based codes</li>
+                        <li>Hardware security keys</li>
+                        <li>Biometric verification combined with passwords</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Digital Footprint Analysis -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-shoe-prints text-blue-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold">Digital Footprint Analysis</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Examination of users' online presence and activities to verify identity and assess fraud risk.</p>
+                    <h4 class="font-semibold mb-2">Key Applications:</h4>
+                    <ul class="list-disc pl-5 text-gray-700">
+                        <li>Email address verification and history</li>
+                        <li>Social media account analysis</li>
+                        <li>IP address and geolocation verification</li>
+                        <li>Device recognition and reputation checking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="section bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">What should I do if I become a victim of digital fraud?</h3>
+                        <p class="text-gray-700">If you suspect you've been victimized by digital fraud:</p>
+                        <ol class="list-decimal pl-5 mt-2 space-y-2 text-gray-700">
+                            <li>Report the fraud to your financial institutions immediately</li>
+                            <li>Change passwords for all affected accounts</li>
+                            <li>Place a fraud alert on your credit reports</li>
+                            <li>File a report with law enforcement and the FTC at IdentityTheft.gov</li>
+                            <li>Monitor your accounts closely for suspicious activity</li>
+                            <li>Consider freezing your credit if identity theft is involved</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">How can I tell if an email is a phishing attempt?</h3>
+                        <p class="text-gray-700">Look for these red flags:</p>
+                        <ul class="list-disc pl-5 mt-2 space-y-2 text-gray-700">
+                            <li>Generic greetings instead of your name</li>
+                            <li>Spelling and grammar errors</li>
+                            <li>Urgent requests for personal information</li>
+                            <li>Suspicious sender email addresses (check carefully for slight misspellings)</li>
+                            <li>Hover over links to see if they lead to legitimate websites</li>
+                            <li>Unexpected attachments</li>
+                            <li>Offers that seem too good to be true</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Are certain demographics more vulnerable to digital fraud?</h3>
+                        <p class="text-gray-700">While anyone can be targeted, certain groups may be more vulnerable:</p>
+                        <ul class="list-disc pl-5 mt-2 space-y-2 text-gray-700">
+                            <li><strong>Seniors:</strong> Often targeted due to perceived unfamiliarity with technology and potential access to retirement funds</li>
+                            <li><strong>Young adults:</strong> May be less cautious online and have less experience recognizing scams</li>
+                            <li><strong>Small business owners:</strong> May lack robust security resources compared to larger organizations</li>
+                            <li><strong>Non-native English speakers:</strong> May miss language cues that indicate fraudulent communications</li>
+                        </ul>
+                        <p class="mt-3 text-gray-700">Education and awareness are key protective factors regardless of demographic.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">How effective is multi-factor authentication in preventing fraud?</h3>
+                        <p class="text-gray-700">Multi-factor authentication (MFA) is highly effective at preventing unauthorized account access. According to Microsoft, MFA can block over 99.9% of account compromise attacks. While not completely foolproof, it significantly raises the bar for attackers, as they would need to compromise multiple authentication factors rather than just a password.</p>
+                        <p class="mt-3 text-gray-700">The strongest forms of MFA use a combination of something you know (password), something you have (physical device or token), and something you are (biometric).</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">What emerging fraud threats should I be aware of?</h3>
+                        <p class="text-gray-700">Several evolving threats to watch for include:</p>
+                        <ul class="list-disc pl-5 mt-2 space-y-2 text-gray-700">
+                            <li><strong>Deepfake technology:</strong> AI-generated video and audio that can impersonate trusted individuals</li>
+                            <li><strong>SIM swapping:</strong> Attackers take control of your phone number to intercept verification codes</li>
+                            <li><strong>AI-powered phishing:</strong> More sophisticated, personalized scam messages created using artificial intelligence</li>
+                            <li><strong>QR code fraud:</strong> Manipulated QR codes that lead to malicious websites</li>
+                            <li><strong>Supply chain attacks:</strong> Targeting trusted software providers to distribute malware to their customers</li>
+                        </ul>
+                        <p class="mt-3 text-gray-700">Staying informed about new threats and maintaining good security practices is your best defense.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources -->
+    <section id="resources" class="section container mx-auto px-6">
